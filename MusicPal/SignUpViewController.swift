@@ -9,11 +9,69 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameTextField: UITextField!{
+        didSet{
+            nameTextField.translatesAutoresizingMaskIntoConstraints = false
+            nameTextField.layer.cornerRadius = 2
+            nameTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
+    }
+    
+    @IBOutlet weak var mailTextField: UITextField!{
+        didSet{
+            mailTextField.translatesAutoresizingMaskIntoConstraints = false
+            mailTextField.layer.cornerRadius = 2
+            mailTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
+    }
+    
+    @IBOutlet weak var passwordTextField: UITextField!{
+        didSet{
+            passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+            passwordTextField.layer.cornerRadius = 2
+            passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
+    }
+    @IBOutlet weak var passwordAgainTextField: UITextField!{
+        didSet{
+            passwordAgainTextField.translatesAutoresizingMaskIntoConstraints = false
+            passwordAgainTextField.layer.cornerRadius = 2
+            passwordAgainTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
+    }
+    
+    @IBOutlet weak var signUpButton: UIButton!{
+        didSet{
+            signUpButton.layer.cornerRadius = 6
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= (keyboardSize.height-150)
+            }
+        }
+    }
 
-        // Do any additional setup after loading the view.
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    @IBAction func backButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "goBackLoginSegue", sender: nil)
+    }
+    
+    @IBAction func signUpButtonClicked(_ sender: Any) {
     }
     
 

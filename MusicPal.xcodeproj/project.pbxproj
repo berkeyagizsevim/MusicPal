@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A304A92A23A138230079F903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304A92923A138230079F903 /* AppDelegate.swift */; };
 		A304A92C23A138230079F903 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304A92B23A138230079F903 /* SceneDelegate.swift */; };
-		A304A92E23A138230079F903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304A92D23A138230079F903 /* ViewController.swift */; };
+		A304A92E23A138230079F903 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304A92D23A138230079F903 /* LoginViewController.swift */; };
 		A304A93123A138230079F903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A304A92F23A138230079F903 /* Main.storyboard */; };
 		A304A93323A138250079F903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A304A93223A138250079F903 /* Assets.xcassets */; };
 		A304A93623A138250079F903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A304A93423A138250079F903 /* LaunchScreen.storyboard */; };
+		A304A93E23A138CD0079F903 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304A93D23A138CD0079F903 /* SignUpViewController.swift */; };
+		A304A94023A1396A0079F903 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A304A93F23A1396A0079F903 /* GoogleService-Info.plist */; };
+		A304A94223A157F20079F903 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304A94123A157F20079F903 /* ViewControllerExtension.swift */; };
+		B38470646A9080F1F5B10393 /* Pods_MusicPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA5637AE71CBD0B59BC7FFA /* Pods_MusicPal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4ED89E25B22A86D592D6E7B7 /* Pods-MusicPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPal.debug.xcconfig"; path = "Target Support Files/Pods-MusicPal/Pods-MusicPal.debug.xcconfig"; sourceTree = "<group>"; };
 		A304A92623A138230079F903 /* MusicPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A304A92923A138230079F903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A304A92B23A138230079F903 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A304A92D23A138230079F903 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A304A92D23A138230079F903 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A304A93023A138230079F903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A304A93223A138250079F903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A304A93523A138250079F903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A304A93723A138250079F903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A304A93D23A138CD0079F903 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A304A93F23A1396A0079F903 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A304A94123A157F20079F903 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		AAA5637AE71CBD0B59BC7FFA /* Pods_MusicPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D021853E35E4891AFE30EBE0 /* Pods-MusicPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPal.release.xcconfig"; path = "Target Support Files/Pods-MusicPal/Pods-MusicPal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38470646A9080F1F5B10393 /* Pods_MusicPal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC803622F2CE26FA18E9D62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAA5637AE71CBD0B59BC7FFA /* Pods_MusicPal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		397AF8ABA72204EA1603D6B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4ED89E25B22A86D592D6E7B7 /* Pods-MusicPal.debug.xcconfig */,
+				D021853E35E4891AFE30EBE0 /* Pods-MusicPal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A304A91D23A138230079F903 = {
 			isa = PBXGroup;
 			children = (
 				A304A92823A138230079F903 /* MusicPal */,
 				A304A92723A138230079F903 /* Products */,
+				397AF8ABA72204EA1603D6B0 /* Pods */,
+				0FC803622F2CE26FA18E9D62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +88,13 @@
 			children = (
 				A304A92923A138230079F903 /* AppDelegate.swift */,
 				A304A92B23A138230079F903 /* SceneDelegate.swift */,
-				A304A92D23A138230079F903 /* ViewController.swift */,
+				A304A92D23A138230079F903 /* LoginViewController.swift */,
+				A304A94123A157F20079F903 /* ViewControllerExtension.swift */,
+				A304A93D23A138CD0079F903 /* SignUpViewController.swift */,
 				A304A92F23A138230079F903 /* Main.storyboard */,
 				A304A93223A138250079F903 /* Assets.xcassets */,
 				A304A93423A138250079F903 /* LaunchScreen.storyboard */,
+				A304A93F23A1396A0079F903 /* GoogleService-Info.plist */,
 				A304A93723A138250079F903 /* Info.plist */,
 			);
 			path = MusicPal;
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A304A93A23A138250079F903 /* Build configuration list for PBXNativeTarget "MusicPal" */;
 			buildPhases = (
+				D2F261EF2DA8693D8A83354B /* [CP] Check Pods Manifest.lock */,
 				A304A92223A138230079F903 /* Sources */,
 				A304A92323A138230079F903 /* Frameworks */,
 				A304A92423A138230079F903 /* Resources */,
+				8AE1D1FDE76D00C37745AE99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A304A93623A138250079F903 /* LaunchScreen.storyboard in Resources */,
+				A304A94023A1396A0079F903 /* GoogleService-Info.plist in Resources */,
 				A304A93323A138250079F903 /* Assets.xcassets in Resources */,
 				A304A93123A138230079F903 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +169,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8AE1D1FDE76D00C37745AE99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicPal/Pods-MusicPal-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicPal/Pods-MusicPal-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicPal/Pods-MusicPal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F261EF2DA8693D8A83354B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusicPal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A304A92223A138230079F903 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A304A92E23A138230079F903 /* ViewController.swift in Sources */,
+				A304A92E23A138230079F903 /* LoginViewController.swift in Sources */,
 				A304A92A23A138230079F903 /* AppDelegate.swift in Sources */,
+				A304A93E23A138CD0079F903 /* SignUpViewController.swift in Sources */,
+				A304A94223A157F20079F903 /* ViewControllerExtension.swift in Sources */,
 				A304A92C23A138230079F903 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +362,7 @@
 		};
 		A304A93B23A138250079F903 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ED89E25B22A86D592D6E7B7 /* Pods-MusicPal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +381,7 @@
 		};
 		A304A93C23A138250079F903 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D021853E35E4891AFE30EBE0 /* Pods-MusicPal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
