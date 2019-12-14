@@ -138,19 +138,13 @@
 		A304A92823A138230079F903 /* MusicPal */ = {
 			isa = PBXGroup;
 			children = (
+				A3F346A923A56A730044CA66 /* LoginScreens */,
+				A3F346A323A56A0A0044CA66 /* InAppScreens */,
 				A3597CBB23A3EDFF00BD4AEC /* Extensions */,
 				A3597C9223A3E3A200BD4AEC /* Fonts */,
 				A304A92923A138230079F903 /* AppDelegate.swift */,
 				A304A92B23A138230079F903 /* SceneDelegate.swift */,
-				A304A92D23A138230079F903 /* LoginViewController.swift */,
-				A304A93D23A138CD0079F903 /* SignUpViewController.swift */,
 				A304A92F23A138230079F903 /* Main.storyboard */,
-				A3886C7523A2A6D800A720E6 /* HowItWorksViewController.swift */,
-				A3886C7323A2A6BC00A720E6 /* ConcertsViewController.swift */,
-				A3886C7123A2A69900A720E6 /* FindMusiciansViewController.swift */,
-				A352C3FC23A53AE600ABF001 /* ProfileCustomTableViewCell.swift */,
-				A3886C6F23A2A67900A720E6 /* ProfileSettingsViewController.swift */,
-				A30E354F23A16F3300FFE7A4 /* ProfileViewController.swift */,
 				A304A93223A138250079F903 /* Assets.xcassets */,
 				A304A93423A138250079F903 /* LaunchScreen.storyboard */,
 				A304A93F23A1396A0079F903 /* GoogleService-Info.plist */,
@@ -192,6 +186,76 @@
 				A304A94123A157F20079F903 /* ViewControllerExtension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		A3F346A323A56A0A0044CA66 /* InAppScreens */ = {
+			isa = PBXGroup;
+			children = (
+				A3F346A423A56A170044CA66 /* Profile */,
+				A3F346A523A56A250044CA66 /* ProfileSettings */,
+				A3F346A623A56A360044CA66 /* Find Musicians */,
+				A3F346A723A56A520044CA66 /* Concerts */,
+				A3F346A823A56A5D0044CA66 /* How It Works? */,
+			);
+			name = InAppScreens;
+			sourceTree = "<group>";
+		};
+		A3F346A423A56A170044CA66 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A30E354F23A16F3300FFE7A4 /* ProfileViewController.swift */,
+				A3F346AA23A56A9A0044CA66 /* CustomTableView */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		A3F346A523A56A250044CA66 /* ProfileSettings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ProfileSettings;
+			sourceTree = "<group>";
+		};
+		A3F346A623A56A360044CA66 /* Find Musicians */ = {
+			isa = PBXGroup;
+			children = (
+				A3886C7123A2A69900A720E6 /* FindMusiciansViewController.swift */,
+			);
+			name = "Find Musicians";
+			sourceTree = "<group>";
+		};
+		A3F346A723A56A520044CA66 /* Concerts */ = {
+			isa = PBXGroup;
+			children = (
+				A3886C7323A2A6BC00A720E6 /* ConcertsViewController.swift */,
+			);
+			name = Concerts;
+			sourceTree = "<group>";
+		};
+		A3F346A823A56A5D0044CA66 /* How It Works? */ = {
+			isa = PBXGroup;
+			children = (
+				A3886C7523A2A6D800A720E6 /* HowItWorksViewController.swift */,
+			);
+			name = "How It Works?";
+			sourceTree = "<group>";
+		};
+		A3F346A923A56A730044CA66 /* LoginScreens */ = {
+			isa = PBXGroup;
+			children = (
+				A304A92D23A138230079F903 /* LoginViewController.swift */,
+				A304A93D23A138CD0079F903 /* SignUpViewController.swift */,
+			);
+			name = LoginScreens;
+			sourceTree = "<group>";
+		};
+		A3F346AA23A56A9A0044CA66 /* CustomTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A352C3FC23A53AE600ABF001 /* ProfileCustomTableViewCell.swift */,
+				A3886C6F23A2A67900A720E6 /* ProfileSettingsViewController.swift */,
+			);
+			name = CustomTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
