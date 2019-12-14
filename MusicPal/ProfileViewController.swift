@@ -8,7 +8,15 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController{
+    
+    @IBOutlet weak var scrollableBackground: UIView!{
+        didSet{
+            scrollableBackground.backgroundColor = UIColor.purple
+        }
+    }
+    
+
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var profilePicture: UIImageView!{
@@ -38,33 +46,41 @@ class ProfileViewController: UIViewController {
         }
     }
     @IBOutlet weak var profileDetailText: UILabel!
-    @IBOutlet weak var profileDetailTableView: UITableView!
+    @IBOutlet weak var profileDetailTableView: UITableView!{
+        didSet{
+            profileDetailTableView.backgroundColor = UIColor.green
+            
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileDetailTableView.delegate = self
+        profileDetailTableView.dataSource = self
         setupUI()
     }
     
     func setupUI(){
             
             let whiteBackground = UIView()
-            whiteBackground.backgroundColor = UIColor.white
+            whiteBackground.backgroundColor = UIColor.black
             let whiteBackgroundHeight: CGFloat = 420
             
             let backgroundLayer = UIView()
             let height:CGFloat = 150
             let width:CGFloat = 150
-            self.view.addSubview(whiteBackground)
+            scrollableBackground.addSubview(whiteBackground)
+        
             
             // MARK: White Background Constraint
             whiteBackground.translatesAutoresizingMaskIntoConstraints = false
-            whiteBackground.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            whiteBackground.topAnchor.constraint(equalTo: scrollableBackground.topAnchor).isActive = true
             whiteBackground.heightAnchor.constraint(equalToConstant: whiteBackgroundHeight).isActive = true
-            whiteBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            whiteBackground.centerXAnchor.constraint(equalTo: scrollableBackground.centerXAnchor).isActive = true
             
-            whiteBackground.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-            whiteBackground.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            whiteBackground.leadingAnchor.constraint(equalTo: scrollableBackground.leadingAnchor).isActive = true
+            whiteBackground.trailingAnchor.constraint(equalTo: scrollableBackground.trailingAnchor).isActive = true
             
             
             backgroundLayer.layer.cornerRadius = height / 2
@@ -102,7 +118,6 @@ class ProfileViewController: UIViewController {
             
             // MARK: Location Label Constraints
             
-            backgroundLayer.addSubview(locationLabel)
             whiteBackground.addSubview(locationLabel)
             
             locationLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -146,31 +161,38 @@ class ProfileViewController: UIViewController {
            
             // MARK: Table View Constraints
             
-            backgroundLayer.addSubview(profileDetailTableView)
+            scrollableBackground.addSubview(profileDetailTableView)
             profileDetailTableView.translatesAutoresizingMaskIntoConstraints = false
-            profileDetailTableView.topAnchor.constraint(equalTo: whiteBackground.bottomAnchor, constant: 15).isActive = true
-            profileDetailTableView.leadingAnchor.constraint(equalTo: whiteBackground.leadingAnchor, constant: 35).isActive = true
-            profileDetailTableView.trailingAnchor.constraint(equalTo: whiteBackground.trailingAnchor, constant: -35).isActive = true
-            profileDetailTableView.centerXAnchor.constraint(equalTo: whiteBackground.centerXAnchor).isActive = true
-            
-            profileDetailTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-            
-            
-                  
+            profileDetailTableView.topAnchor.constraint(equalTo: scrollableBackground.topAnchor, constant: 600).isActive = true
+            profileDetailTableView.leadingAnchor.constraint(equalTo: scrollableBackground.leadingAnchor, constant: 35).isActive = true
+            profileDetailTableView.trailingAnchor.constraint(equalTo: scrollableBackground.trailingAnchor, constant: -35).isActive = true
+            profileDetailTableView.centerXAnchor.constraint(equalTo: scrollableBackground.centerXAnchor).isActive = true
+           
     }
     
     @IBAction func settingsButtonClicked(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "profileSettingsClicked", sender: nil)
     }
+
     
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileCustomTableViewCell
+        cell.detailTextLabel?.text = "Hello world"
+        cell.backgroundImage.image = UIImage(named: "guitar")
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+          return 68
+    }
+    
+    
+    
 }

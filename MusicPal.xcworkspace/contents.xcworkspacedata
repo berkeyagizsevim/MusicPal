@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/berkeyagizsevim/Desktop/MusicPal/MusicPal/Fonts/ProfileDetailsTableViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/berkeyagizsevim/Desktop/MusicPal/MusicPal/Fonts/ProfileDetailsTableViewCell.xib">
+   </FileRef>
+   <FileRef
       location = "group:MusicPal.xcodeproj">
    </FileRef>
    <FileRef
