@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController{
     
     @IBOutlet weak var scrollableBackground: UIView!{
         didSet{
-            scrollableBackground.backgroundColor = UIColor.purple
+            scrollableBackground.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9607843137, blue: 0.9764705882, alpha: 1)
         }
     }
     
@@ -48,7 +48,7 @@ class ProfileViewController: UIViewController{
     @IBOutlet weak var profileDetailText: UILabel!
     @IBOutlet weak var profileDetailTableView: UITableView!{
         didSet{
-            profileDetailTableView.backgroundColor = UIColor.green
+            profileDetailTableView.backgroundColor = UIColor.clear
             
         }
     }
@@ -64,8 +64,8 @@ class ProfileViewController: UIViewController{
     func setupUI(){
             
             let whiteBackground = UIView()
-            whiteBackground.backgroundColor = UIColor.black
-            let whiteBackgroundHeight: CGFloat = 420
+            whiteBackground.backgroundColor = UIColor.white
+            let whiteBackgroundHeight: CGFloat = 380
             
             let backgroundLayer = UIView()
             let height:CGFloat = 150
@@ -93,7 +93,7 @@ class ProfileViewController: UIViewController{
             backgroundLayer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             backgroundLayer.heightAnchor.constraint(equalToConstant: height).isActive = true
             backgroundLayer.widthAnchor.constraint(equalToConstant: width).isActive = true
-            backgroundLayer.topAnchor.constraint(equalTo: whiteBackground.topAnchor, constant: 75).isActive = true
+            backgroundLayer.topAnchor.constraint(equalTo: whiteBackground.topAnchor, constant: 45).isActive = true
             
             // MARK: Profile Picture Constraint
             
@@ -163,7 +163,7 @@ class ProfileViewController: UIViewController{
             
             scrollableBackground.addSubview(profileDetailTableView)
             profileDetailTableView.translatesAutoresizingMaskIntoConstraints = false
-            profileDetailTableView.topAnchor.constraint(equalTo: scrollableBackground.topAnchor, constant: 600).isActive = true
+            profileDetailTableView.topAnchor.constraint(equalTo: whiteBackground.bottomAnchor, constant: 30).isActive = true
             profileDetailTableView.leadingAnchor.constraint(equalTo: scrollableBackground.leadingAnchor, constant: 35).isActive = true
             profileDetailTableView.trailingAnchor.constraint(equalTo: scrollableBackground.trailingAnchor, constant: -35).isActive = true
             profileDetailTableView.centerXAnchor.constraint(equalTo: scrollableBackground.centerXAnchor).isActive = true
@@ -179,18 +179,18 @@ class ProfileViewController: UIViewController{
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileCustomTableViewCell
-        cell.detailTextLabel?.text = "Hello world"
+        cell.detailedText.text = "Berke Yağız Sevim"
         cell.backgroundImage.image = UIImage(named: "guitar")
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-          return 68
+          return 92
     }
     
     

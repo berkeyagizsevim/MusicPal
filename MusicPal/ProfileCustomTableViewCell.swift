@@ -10,6 +10,17 @@ import UIKit
 
 class ProfileCustomTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var cellBackground: UIView!{
+        didSet{
+            cellBackground.layer.cornerRadius = 6
+        }
+    }
+    @IBOutlet weak var bgView: UIView!{
+        didSet{
+            bgView.layer.cornerRadius = 25
+            
+        }
+    }
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var detailedText: UILabel!
     override func awakeFromNib() {
