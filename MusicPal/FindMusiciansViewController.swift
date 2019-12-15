@@ -21,7 +21,7 @@ class FindMusiciansViewController: UIViewController {
     var musicianLocation = ""
     var musicianDescription = ""
     var musicianDetails = [String]()
-  
+    
     
     func createData(){
         let rockMusician1 = MusicianData(name: "Berke Yağız Sevim", image: "profile-pic", needs: "looking for a guitarist for playing a Rock ", location: "Istanbul - Turkey", description: "Hello, my name is Yagiz from Turkey! 🇹🇷 I love playing guitar. Mostly i like playing Jazz. We if you are interested in Jazz around Besiktas, text me or hire me!", details: ["5 year experience on music industry. Freelance song writer.","playing guitar for 10 years. Best solo guitarist in this town. He loves Michael Jordan.","he is looking for piano artist from Istanbul. Also wants to play in public transportation.","he loves Jazz, RnB, HipHop music. "])
@@ -33,8 +33,8 @@ class FindMusiciansViewController: UIViewController {
         rnbMusicData.append(rnbMusician2)
         
         let jazzMusician1 = MusicianData(name: "Hailey Opaw", image: "profile-pic", needs: "looking for a solist for playing a Rock ", location: "Yalova - Turkey", description: "Hello, my name is Kaan from Turkey! 🇹🇷 I love playing guitar. Mostly i like playing Jazz. We if you are interested in Jazz around Besiktas, text me or hire me!", details: ["5 year experience on music industry. Freelance song writer.","playing guitar for 10 years. Best solo guitarist in this town. He loves Michael Jordan.","he is looking for piano artist from Istanbul. Also wants to play in public transportation.","he loves Jazz, RnB, HipHop music. "])
-         let jazzMusician2 = MusicianData(name: "Sercan Can", image: "profile-pic", needs: "looking for a solist for playing a Rock ", location: "Kırklareli - Turkey", description: "Hello, my name is Kaan from Turkey! 🇹🇷 I love playing guitar. Mostly i like playing Jazz. We if you are interested in Jazz around Besiktas, text me or hire me!", details: ["5 year experience on music industry. Freelance song writer.","playing guitar for 10 years. Best solo guitarist in this town. He loves Michael Jordan.","he is looking for piano artist from Istanbul. Also wants to play in public transportation.","he loves Jazz, RnB, HipHop music. "])
-         let jazzMusician3 = MusicianData(name: "Hülya Canyılmaz", image: "profile-pic", needs: "looking for a safasfas for playing a Rock ", location: "İzmit - Turkey", description: "Hello, my name is Kaan from Turkey! 🇹🇷 I love playing guitar. Mostly i like playing Jazz. We if you are interested in Jazz around Besiktas, text me or hire me!", details: ["5 year experience on music industry. Freelance song writer.","playing guitar for 10 years. Best solo guitarist in this town. He loves Michael Jordan.","he is looking for piano artist from Istanbul. Also wants to play in public transportation.","he loves Jazz, RnB, HipHop music. "])
+        let jazzMusician2 = MusicianData(name: "Sercan Can", image: "profile-pic", needs: "looking for a solist for playing a Rock ", location: "Kırklareli - Turkey", description: "Hello, my name is Kaan from Turkey! 🇹🇷 I love playing guitar. Mostly i like playing Jazz. We if you are interested in Jazz around Besiktas, text me or hire me!", details: ["5 year experience on music industry. Freelance song writer.","playing guitar for 10 years. Best solo guitarist in this town. He loves Michael Jordan.","he is looking for piano artist from Istanbul. Also wants to play in public transportation.","he loves Jazz, RnB, HipHop music. "])
+        let jazzMusician3 = MusicianData(name: "Hülya Canyılmaz", image: "profile-pic", needs: "looking for a safasfas for playing a Rock ", location: "İzmit - Turkey", description: "Hello, my name is Kaan from Turkey! 🇹🇷 I love playing guitar. Mostly i like playing Jazz. We if you are interested in Jazz around Besiktas, text me or hire me!", details: ["5 year experience on music industry. Freelance song writer.","playing guitar for 10 years. Best solo guitarist in this town. He loves Michael Jordan.","he is looking for piano artist from Istanbul. Also wants to play in public transportation.","he loves Jazz, RnB, HipHop music. "])
         jazzMusicData.append(jazzMusician1)
         jazzMusicData.append(jazzMusician2)
         jazzMusicData.append(jazzMusician3)
@@ -65,10 +65,10 @@ class FindMusiciansViewController: UIViewController {
     @IBAction func segmentClicked(_ sender: UISegmentedControl) {
         musicianTableView.reloadData()
     }
-
     
     
-
+    
+    
 }
 extension FindMusiciansViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,10 +81,11 @@ extension FindMusiciansViewController: UITableViewDelegate, UITableViewDataSourc
         case 2:
             value = jazzMusicData.count
         default:
-             break
+            break
         }
         return value
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "toMusicianDetails", for: indexPath) as! MusicianDetailTableViewCell
@@ -109,6 +110,53 @@ extension FindMusiciansViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch musicTypeSegment.selectedSegmentIndex {
+        case 0:
+            musicianName = rockMusicData[indexPath.row].name
+            musicianImage = UIImage(named: "\(rockMusicData[indexPath.row].image)")!
+            musicianNeeds = rockMusicData[indexPath.row].needs
+            musicianLocation = rockMusicData[indexPath.row].location
+            musicianDescription = rockMusicData[indexPath.row].description
+            musicianDetails = rockMusicData[indexPath.row].details
+        case 1:
+            musicianName = rnbMusicData[indexPath.row].name
+            musicianImage = UIImage(named: "\(rnbMusicData[indexPath.row].image)")!
+            musicianNeeds = rnbMusicData[indexPath.row].needs
+            musicianLocation = rnbMusicData[indexPath.row].location
+            musicianDescription = rnbMusicData[indexPath.row].description
+            musicianDetails = rnbMusicData[indexPath.row].details
+        case 2:
+            musicianName = jazzMusicData[indexPath.row].name
+            musicianImage = UIImage(named: "\(jazzMusicData[indexPath.row].image)")!
+            musicianNeeds = jazzMusicData[indexPath.row].needs
+            musicianLocation = jazzMusicData[indexPath.row].location
+            musicianDescription = jazzMusicData[indexPath.row].description
+            musicianDetails = jazzMusicData[indexPath.row].details
+        default:
+            break
+        }
+        performSegue(withIdentifier: "findMusiciansDetailVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "findMusiciansDetailVC"{
+            if let destinationVC = segue.destination as? FindMusicianDetailVC{
+                destinationVC.musicianName = musicianName
+                destinationVC.musicianLocation = musicianLocation
+                destinationVC.musicianProfilePhoto = musicianImage
+                destinationVC.musicianDetailedText = musicianDescription
+                destinationVC.musicianAbilities = musicianDetails
+            }
+            
+        }
+    }
+    
+    
+    
+    
     
     
 }

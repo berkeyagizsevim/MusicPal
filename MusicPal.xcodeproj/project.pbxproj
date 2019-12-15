@@ -25,6 +25,7 @@
 		A31EC0EC23A633FE000C6DA1 /* FindMusicianDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EC0EB23A633FE000C6DA1 /* FindMusicianDetailVC.swift */; };
 		A31EC0EE23A63BAD000C6DA1 /* MusicianDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EC0ED23A63BAD000C6DA1 /* MusicianDetailTableViewCell.swift */; };
 		A31EC0F023A646D6000C6DA1 /* MusicianData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EC0EF23A646D6000C6DA1 /* MusicianData.swift */; };
+		A31EC0F223A673F4000C6DA1 /* MusicianInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EC0F123A673F4000C6DA1 /* MusicianInformationTableViewCell.swift */; };
 		A352C3FD23A53AE600ABF001 /* ProfileCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352C3FC23A53AE600ABF001 /* ProfileCustomTableViewCell.swift */; };
 		A3597CA623A3E3C800BD4AEC /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3597C9323A3E3C700BD4AEC /* Montserrat-ExtraLight.ttf */; };
 		A3597CA723A3E3C800BD4AEC /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3597C9423A3E3C700BD4AEC /* Montserrat-ExtraBoldItalic.ttf */; };
@@ -73,6 +74,7 @@
 		A31EC0EB23A633FE000C6DA1 /* FindMusicianDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMusicianDetailVC.swift; sourceTree = "<group>"; };
 		A31EC0ED23A63BAD000C6DA1 /* MusicianDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianDetailTableViewCell.swift; sourceTree = "<group>"; };
 		A31EC0EF23A646D6000C6DA1 /* MusicianData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianData.swift; sourceTree = "<group>"; };
+		A31EC0F123A673F4000C6DA1 /* MusicianInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianInformationTableViewCell.swift; sourceTree = "<group>"; };
 		A352C3FC23A53AE600ABF001 /* ProfileCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCustomTableViewCell.swift; sourceTree = "<group>"; };
 		A3597C9323A3E3C700BD4AEC /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraLight.ttf"; path = "../../../Montserrat/Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		A3597C9423A3E3C700BD4AEC /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraBoldItalic.ttf"; path = "../../../Montserrat/Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -171,6 +173,15 @@
 			path = MusicPal;
 			sourceTree = "<group>";
 		};
+		A31EC0F323A673FC000C6DA1 /* Find Musicians Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A31EC0EB23A633FE000C6DA1 /* FindMusicianDetailVC.swift */,
+				A31EC0F123A673F4000C6DA1 /* MusicianInformationTableViewCell.swift */,
+			);
+			name = "Find Musicians Detail";
+			sourceTree = "<group>";
+		};
 		A3597C9223A3E3A200BD4AEC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,8 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				A3886C7123A2A69900A720E6 /* FindMusiciansViewController.swift */,
-				A31EC0EB23A633FE000C6DA1 /* FindMusicianDetailVC.swift */,
 				A31EC0ED23A63BAD000C6DA1 /* MusicianDetailTableViewCell.swift */,
+				A31EC0F323A673FC000C6DA1 /* Find Musicians Detail */,
 				A31EC0EF23A646D6000C6DA1 /* MusicianData.swift */,
 			);
 			name = "Find Musicians";
@@ -439,6 +450,7 @@
 				A31EC0EE23A63BAD000C6DA1 /* MusicianDetailTableViewCell.swift in Sources */,
 				A304A94223A157F20079F903 /* ViewControllerExtension.swift in Sources */,
 				A304A92C23A138230079F903 /* SceneDelegate.swift in Sources */,
+				A31EC0F223A673F4000C6DA1 /* MusicianInformationTableViewCell.swift in Sources */,
 				A3886C7623A2A6D800A720E6 /* HowItWorksViewController.swift in Sources */,
 				A3F346AC23A572C90044CA66 /* CustomConcertTableViewCell.swift in Sources */,
 			);
