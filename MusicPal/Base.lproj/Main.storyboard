@@ -13,6 +13,9 @@
         <array key="Montserrat-Bold.ttf">
             <string>Montserrat-Bold</string>
         </array>
+        <array key="Montserrat-ExtraBold.ttf">
+            <string>Montserrat-ExtraBold</string>
+        </array>
         <array key="Montserrat-Medium.ttf">
             <string>Montserrat-Medium</string>
         </array>
@@ -682,6 +685,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="contactButtonClicked:" destination="oB4-JB-Z8I" eventType="touchUpInside" id="jxO-5r-67n"/>
+                                                            <segue destination="70t-Up-h7C" kind="presentation" id="tos-4D-lKc"/>
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hii-oH-HbH">
@@ -833,6 +837,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATs-1L-Fyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1880.8" y="438.0809595202399"/>
+        </scene>
+        <!--Contact Pop Up View Controller-->
+        <scene sceneID="rI8-wU-GCZ">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="70t-Up-h7C" customClass="ContactPopUpViewController" customModule="MusicPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.65000000000000002" contentMode="scaleToFill" id="shb-Xj-4eI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zu8-2e-P5H">
+                                <rect key="frame" x="35" y="99" width="304" height="303"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5M-CN-0Dy">
+                                        <rect key="frame" x="0.0" y="253" width="304" height="50"/>
+                                        <color key="backgroundColor" red="0.3803921569" green="0.23529411759999999" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="304" id="2BJ-Wk-eRY"/>
+                                            <constraint firstAttribute="height" constant="50" id="XgA-MV-J1W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Send Message">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendMessageButtonClicked:" destination="70t-Up-h7C" eventType="touchUpInside" id="pn4-xa-m8V"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezw-Rl-XH9">
+                                        <rect key="frame" x="266" y="10" width="30" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="7bB-4d-YSl"/>
+                                            <constraint firstAttribute="height" constant="33" id="cs8-iw-6c5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeButtonClicked:" destination="70t-Up-h7C" eventType="touchUpInside" id="1hq-mQ-Z4d"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write something to meet him/her!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KyR-d4-udp">
+                                        <rect key="frame" x="8" y="46" width="288" height="199"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.10399721746575342" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ezw-Rl-XH9" secondAttribute="trailing" constant="8" id="1te-VU-UzG"/>
+                                    <constraint firstItem="KyR-d4-udp" firstAttribute="top" secondItem="Ezw-Rl-XH9" secondAttribute="bottom" constant="3" id="ABW-qE-hyI"/>
+                                    <constraint firstItem="z5M-CN-0Dy" firstAttribute="leading" secondItem="Zu8-2e-P5H" secondAttribute="leading" id="Cd6-RP-b4p"/>
+                                    <constraint firstItem="Ezw-Rl-XH9" firstAttribute="top" secondItem="Zu8-2e-P5H" secondAttribute="top" constant="10" id="I9k-V3-HJC"/>
+                                    <constraint firstAttribute="trailing" secondItem="z5M-CN-0Dy" secondAttribute="trailing" id="IOh-c9-55M"/>
+                                    <constraint firstAttribute="height" constant="303" id="Nig-ur-pG9"/>
+                                    <constraint firstAttribute="width" constant="304" id="SAh-I1-WZ2"/>
+                                    <constraint firstItem="z5M-CN-0Dy" firstAttribute="top" secondItem="KyR-d4-udp" secondAttribute="bottom" constant="8" id="Tyz-Hm-1AP"/>
+                                    <constraint firstAttribute="trailing" secondItem="KyR-d4-udp" secondAttribute="trailing" constant="8" id="k6V-l8-41y"/>
+                                    <constraint firstItem="z5M-CN-0Dy" firstAttribute="top" secondItem="KyR-d4-udp" secondAttribute="bottom" constant="8" id="tMK-IE-hEP"/>
+                                    <constraint firstItem="KyR-d4-udp" firstAttribute="leading" secondItem="Zu8-2e-P5H" secondAttribute="leading" constant="8" id="u2j-Ho-hVg"/>
+                                    <constraint firstAttribute="bottom" secondItem="z5M-CN-0Dy" secondAttribute="bottom" id="uDa-8N-j1k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zu8-2e-P5H" firstAttribute="top" secondItem="gpN-uC-2um" secondAttribute="top" constant="99" id="6Xr-sY-SdU"/>
+                            <constraint firstItem="Zu8-2e-P5H" firstAttribute="leading" secondItem="gpN-uC-2um" secondAttribute="leading" constant="35" id="Y9A-LW-iAC"/>
+                            <constraint firstItem="gpN-uC-2um" firstAttribute="trailing" secondItem="Zu8-2e-P5H" secondAttribute="trailing" constant="36" id="fob-z3-jhB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gpN-uC-2um"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SW9-q3-TtM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgN-8w-Tsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2912.8000000000002" y="438.53073463268368"/>
         </scene>
         <!--Concerts-->
         <scene sceneID="K4y-16-Gbp">
