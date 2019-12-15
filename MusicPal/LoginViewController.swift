@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -66,6 +67,24 @@ class LoginViewController: UIViewController {
         //MARK: Change background color
         view.backgroundColor = UIColor(displayP3Red: 243, green: 245, blue: 249, alpha: 1.0)
         
+    }
+    
+    
+    @IBAction func loginButtonClicked(_ sender: UIButton) {
+        if emailTextField.text != "" && passwordTextField.text != ""{
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] authResult, error in
+                if error != nil{
+                    print(error?.localizedDescription)
+                }else{
+                    print("Giriş başarılı!")
+                }
+            }
+        }else{
+            let alert = UIAlertController(title: "Hata", message: "Boş alan bırakılamaz!", preferredStyle: UIAlertController.Style.alert)
+            let action = UIAlertAction(title: "Tekrar dene", style: UIAlertAction.Style.cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     

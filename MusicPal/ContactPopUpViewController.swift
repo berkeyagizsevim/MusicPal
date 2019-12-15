@@ -18,6 +18,7 @@ class ContactPopUpViewController: UIViewController {
     @IBAction func closeButtonClicked(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    @IBOutlet weak var messageBox: UITextField!
     
     @IBAction func sendMessageButtonClicked(_ sender: UIButton) {
          dismiss(animated: true, completion: nil)

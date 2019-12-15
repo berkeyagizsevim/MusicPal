@@ -16,12 +16,13 @@ class ProfileViewController: UIViewController{
         }
     }
     
-
+    let logo = ["+5","guitar","clarinet","keyboard"]
+    let detailedText = ["year experience on music industry. Freelance song writer.","playing guitar for 10 years. Best solo guitarist in this town. He loves Michael Jordan.","he is looking for piano artist from Istanbul. Also wants to play in public transportation.","he loves Jazz, RnB, HipHop music. "]
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var profilePicture: UIImageView!{
         didSet{
-            profilePicture.image = UIImage(named: "profile-pic")
+            profilePicture.image = UIImage(named: "little-prince")
         }
     }
     @IBOutlet weak var nameLabel: UILabel!{
@@ -32,7 +33,7 @@ class ProfileViewController: UIViewController{
     
     @IBOutlet weak var locationLabel: UILabel!{
         didSet{
-            locationLabel.text = "Istanbul  -  Turkey"
+            locationLabel.text = "Istanbul - Turkey"
         }
     }
     
@@ -184,8 +185,8 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProfileCustomTableViewCell
-        cell.detailedText.text = "Berke Yağız Sevim"
-        cell.backgroundImage.image = UIImage(named: "guitar")
+        cell.detailedText.text =  detailedText[indexPath.row]
+        cell.backgroundImage.image = UIImage(named: "\(logo[indexPath.row])")
         return cell
     }
     

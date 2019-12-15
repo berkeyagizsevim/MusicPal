@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
+    
+    var ref: DatabaseReference!
     
     @IBOutlet weak var nameTextField: UITextField!{
         didSet{
@@ -17,6 +20,7 @@ class SignUpViewController: UIViewController {
             nameTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         }
     }
+    
     
     @IBOutlet weak var mailTextField: UITextField!{
         didSet{
@@ -48,6 +52,7 @@ class SignUpViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         self.hideKeyboardWhenTappedAround() 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -72,6 +77,31 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
+        if nameTextField.text != "" && mailTextField.text != "" && passwordTextField.text != "" && passwordAgainTextField.text != ""{
+            if passwordTextField.text == passwordAgainTextField.text{
+                Auth.auth().createUser(withEmail: mailTextField.text!, password: passwordTextField.text!) { authResult, error in
+                    if error != nil{
+                        print(error?.localizedDescription)
+                    }else{
+//                        self.ref.child("users").childByAutoId().setValue(["name": self.nameTextField.text!])
+                        print("Kayıt başarılı!")
+                        self.performSegue(withIdentifier: "completeProfile", sender: nil)
+                        
+                    }
+                }
+            }else{
+                let alert = UIAlertController(title: "Hata", message: "Şifreler uyuşmuyor!", preferredStyle: UIAlertController.Style.alert)
+                let action = UIAlertAction(title: "Tekrar dene", style: UIAlertAction.Style.cancel, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }else{
+            let alert = UIAlertController(title: "Hata", message: "Boş alan bırakılamaz!", preferredStyle: UIAlertController.Style.alert)
+            let action = UIAlertAction(title: "Tekrar dene", style: UIAlertAction.Style.cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
 
