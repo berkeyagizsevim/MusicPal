@@ -17,6 +17,11 @@
 		A304A94023A1396A0079F903 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A304A93F23A1396A0079F903 /* GoogleService-Info.plist */; };
 		A304A94223A157F20079F903 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304A94123A157F20079F903 /* ViewControllerExtension.swift */; };
 		A30E355023A16F3300FFE7A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E354F23A16F3300FFE7A4 /* ProfileViewController.swift */; };
+		A31EC0E423A57A65000C6DA1 /* Jaapokki-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3F346AE23A5753E0044CA66 /* Jaapokki-Regular.otf */; };
+		A31EC0E523A57A65000C6DA1 /* Jaapokkienchance-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3F346AD23A5753E0044CA66 /* Jaapokkienchance-Regular.otf */; };
+		A31EC0E623A57A65000C6DA1 /* Jaapokkisubtract-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3F346AF23A5753E0044CA66 /* Jaapokkisubtract-Regular.otf */; };
+		A31EC0E823A57B66000C6DA1 /* ConcertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EC0E723A57B66000C6DA1 /* ConcertData.swift */; };
+		A31EC0EA23A5A423000C6DA1 /* ConcertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31EC0E923A5A423000C6DA1 /* ConcertDetailViewController.swift */; };
 		A352C3FD23A53AE600ABF001 /* ProfileCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352C3FC23A53AE600ABF001 /* ProfileCustomTableViewCell.swift */; };
 		A3597CA623A3E3C800BD4AEC /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3597C9323A3E3C700BD4AEC /* Montserrat-ExtraLight.ttf */; };
 		A3597CA723A3E3C800BD4AEC /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3597C9423A3E3C700BD4AEC /* Montserrat-ExtraBoldItalic.ttf */; };
@@ -42,6 +47,7 @@
 		A3886C7223A2A69900A720E6 /* FindMusiciansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3886C7123A2A69900A720E6 /* FindMusiciansViewController.swift */; };
 		A3886C7423A2A6BC00A720E6 /* ConcertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3886C7323A2A6BC00A720E6 /* ConcertsViewController.swift */; };
 		A3886C7623A2A6D800A720E6 /* HowItWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3886C7523A2A6D800A720E6 /* HowItWorksViewController.swift */; };
+		A3F346AC23A572C90044CA66 /* CustomConcertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F346AB23A572C90044CA66 /* CustomConcertTableViewCell.swift */; };
 		B38470646A9080F1F5B10393 /* Pods_MusicPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA5637AE71CBD0B59BC7FFA /* Pods_MusicPal.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +65,8 @@
 		A304A93F23A1396A0079F903 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A304A94123A157F20079F903 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		A30E354F23A16F3300FFE7A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A31EC0E723A57B66000C6DA1 /* ConcertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertData.swift; sourceTree = "<group>"; };
+		A31EC0E923A5A423000C6DA1 /* ConcertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertDetailViewController.swift; sourceTree = "<group>"; };
 		A352C3FC23A53AE600ABF001 /* ProfileCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCustomTableViewCell.swift; sourceTree = "<group>"; };
 		A3597C9323A3E3C700BD4AEC /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraLight.ttf"; path = "../../../Montserrat/Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		A3597C9423A3E3C700BD4AEC /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraBoldItalic.ttf"; path = "../../../Montserrat/Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -84,6 +92,10 @@
 		A3886C7123A2A69900A720E6 /* FindMusiciansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMusiciansViewController.swift; sourceTree = "<group>"; };
 		A3886C7323A2A6BC00A720E6 /* ConcertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertsViewController.swift; sourceTree = "<group>"; };
 		A3886C7523A2A6D800A720E6 /* HowItWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksViewController.swift; sourceTree = "<group>"; };
+		A3F346AB23A572C90044CA66 /* CustomConcertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomConcertTableViewCell.swift; sourceTree = "<group>"; };
+		A3F346AD23A5753E0044CA66 /* Jaapokkienchance-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jaapokkienchance-Regular.otf"; path = "../../../Jaapokkienchance-Regular.otf"; sourceTree = "<group>"; };
+		A3F346AE23A5753E0044CA66 /* Jaapokki-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jaapokki-Regular.otf"; path = "../../../Jaapokki-Regular.otf"; sourceTree = "<group>"; };
+		A3F346AF23A5753E0044CA66 /* Jaapokkisubtract-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jaapokkisubtract-Regular.otf"; path = "../../../Jaapokkisubtract-Regular.otf"; sourceTree = "<group>"; };
 		AAA5637AE71CBD0B59BC7FFA /* Pods_MusicPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D021853E35E4891AFE30EBE0 /* Pods-MusicPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPal.release.xcconfig"; path = "Target Support Files/Pods-MusicPal/Pods-MusicPal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +170,9 @@
 			children = (
 				A3597C9523A3E3C700BD4AEC /* Montserrat-Black.ttf */,
 				A3597CA223A3E3C800BD4AEC /* Montserrat-BlackItalic.ttf */,
+				A3F346AE23A5753E0044CA66 /* Jaapokki-Regular.otf */,
+				A3F346AD23A5753E0044CA66 /* Jaapokkienchance-Regular.otf */,
+				A3F346AF23A5753E0044CA66 /* Jaapokkisubtract-Regular.otf */,
 				A3597C9623A3E3C700BD4AEC /* Montserrat-Bold.ttf */,
 				A3597C9923A3E3C700BD4AEC /* Montserrat-BoldItalic.ttf */,
 				A3597C9A23A3E3C700BD4AEC /* Montserrat-ExtraBold.ttf */,
@@ -228,6 +243,9 @@
 			isa = PBXGroup;
 			children = (
 				A3886C7323A2A6BC00A720E6 /* ConcertsViewController.swift */,
+				A3F346AB23A572C90044CA66 /* CustomConcertTableViewCell.swift */,
+				A31EC0E723A57B66000C6DA1 /* ConcertData.swift */,
+				A31EC0E923A5A423000C6DA1 /* ConcertDetailViewController.swift */,
 			);
 			name = Concerts;
 			sourceTree = "<group>";
@@ -322,6 +340,8 @@
 				A3597CB023A3E3C800BD4AEC /* OFL.txt in Resources */,
 				A3597CAB23A3E3C800BD4AEC /* Montserrat-Light.ttf in Resources */,
 				A3597CAE23A3E3C800BD4AEC /* Montserrat-Thin.ttf in Resources */,
+				A31EC0E623A57A65000C6DA1 /* Jaapokkisubtract-Regular.otf in Resources */,
+				A31EC0E423A57A65000C6DA1 /* Jaapokki-Regular.otf in Resources */,
 				A3597CAD23A3E3C800BD4AEC /* Montserrat-ExtraBold.ttf in Resources */,
 				A304A93623A138250079F903 /* LaunchScreen.storyboard in Resources */,
 				A3597CB623A3E3C800BD4AEC /* Montserrat-Italic.ttf in Resources */,
@@ -338,6 +358,7 @@
 				A304A93123A138230079F903 /* Main.storyboard in Resources */,
 				A3597CAA23A3E3C800BD4AEC /* Montserrat-Medium.ttf in Resources */,
 				A3597CB323A3E3C800BD4AEC /* Montserrat-ThinItalic.ttf in Resources */,
+				A31EC0E523A57A65000C6DA1 /* Jaapokkienchance-Regular.otf in Resources */,
 				A3597CA623A3E3C800BD4AEC /* Montserrat-ExtraLight.ttf in Resources */,
 				A3597CAF23A3E3C800BD4AEC /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				A3597CB223A3E3C800BD4AEC /* Montserrat-SemiBoldItalic.ttf in Resources */,
@@ -398,13 +419,16 @@
 				A3597CBA23A3EDEB00BD4AEC /* UIViewExtension.swift in Sources */,
 				A3886C7423A2A6BC00A720E6 /* ConcertsViewController.swift in Sources */,
 				A352C3FD23A53AE600ABF001 /* ProfileCustomTableViewCell.swift in Sources */,
+				A31EC0EA23A5A423000C6DA1 /* ConcertDetailViewController.swift in Sources */,
 				A304A92E23A138230079F903 /* LoginViewController.swift in Sources */,
+				A31EC0E823A57B66000C6DA1 /* ConcertData.swift in Sources */,
 				A304A92A23A138230079F903 /* AppDelegate.swift in Sources */,
 				A3886C7023A2A67900A720E6 /* ProfileSettingsViewController.swift in Sources */,
 				A304A93E23A138CD0079F903 /* SignUpViewController.swift in Sources */,
 				A304A94223A157F20079F903 /* ViewControllerExtension.swift in Sources */,
 				A304A92C23A138230079F903 /* SceneDelegate.swift in Sources */,
 				A3886C7623A2A6D800A720E6 /* HowItWorksViewController.swift in Sources */,
+				A3F346AC23A572C90044CA66 /* CustomConcertTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
